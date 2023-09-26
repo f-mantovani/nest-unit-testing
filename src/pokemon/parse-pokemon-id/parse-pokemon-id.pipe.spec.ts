@@ -37,4 +37,5 @@ describe('ParsePokemonIdPipe', () => {
     expect(value('151')).toBe(151);
     expect(value('64')).toBe(64);
   });
+  // test
 });
