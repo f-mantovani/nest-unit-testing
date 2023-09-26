@@ -1,0 +1,16 @@
+name: Tests
+on: pull_request
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses actions/checkout@v3
+      - name: Install modules
+        run: npm ci
+      - name: Run tests
+        run: npm run test
+# env:
+#     If the API is sensible use the Github secrets
+#     API_KEY: ${{ secrets.API_KEY }}
+#     If not sensible
+#     API_KEY: "an-api-key"
